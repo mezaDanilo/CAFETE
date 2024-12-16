@@ -5,46 +5,38 @@ import Profile from './pages/Profile';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100">
-        {/* Menú de navegación */}
-        <header className="bg-blue-600 text-white shadow-md w-full">
-          <div className="px-4 py-4 flex justify-between items-center">
-            <h1 className="text-lg font-bold">
-              <Link to="/" className="hover:text-gray-200">
-                Mi Aplicación
-              </Link>
-            </h1>
-            <nav>
-              <ul className="flex space-x-4">
-                <li>
-                  <Link
-                    to="/"
-                    className="text-gray-300 hover:text-yellow-400 font-semibold transition-colors"
-                  >
-                    Inicio
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/profile"
-                    className="text-gray-300 hover:text-yellow-400 font-semibold transition-colors"
-                  >
-                    Perfil
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+      {/* Barra de navegación global */}
+      <header className="w-full py-4 bg-gradient-to-r from-pink-600 to-purple-700 shadow-lg">
+        <div className="w-full flex justify-between items-center px-4">
+          <h1 className="text-2xl font-bold text-white">Cafecito</h1>
+          <nav className="flex items-center space-x-6">
+            <Link to="/" className="text-white hover:text-purple-200">Inicio</Link>
+            <Link to="/explore" className="text-white hover:text-purple-200">Explorar</Link>
+            <Link to="/profile" className="text-white hover:text-purple-200">Perfil</Link>
+            <button className="bg-white text-pink-600 py-2 px-4 rounded-lg shadow-md hover:bg-pink-100">
+              Donar un Cafecito
+            </button>
+          </nav>
+        </div>
+      </header>
 
-        {/* Contenido principal */}
-        <main className="px-4 py-8">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-        </main>
-      </div>
+      {/* Rutas principales */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+
+      {/* Footer global */}
+      <footer className="w-full bg-gradient-to-r from-pink-600 to-purple-700 text-white py-8">
+        <div className="w-full px-4 text-center">
+          <p className="text-sm font-light">© 2024 Cafecito. Todos los derechos reservados.</p>
+          <nav className="mt-4 flex justify-center space-x-4">
+            <a href="#" className="hover:text-purple-200">Sobre nosotros</a>
+            <a href="#" className="hover:text-purple-200">Términos</a>
+            <a href="#" className="hover:text-purple-200">Contacto</a>
+          </nav>
+        </div>
+      </footer>
     </Router>
   );
 }
