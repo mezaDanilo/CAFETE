@@ -7,7 +7,7 @@ function App() {
     <Router>
       {/* Barra de navegación global */}
       <header className="w-full py-4 bg-gradient-to-r from-pink-600 to-purple-700 shadow-lg">
-        <div className="w-full flex justify-between items-center px-4">
+        <div className="max-w-screen-lg mx-auto w-full flex justify-between items-center px-4">
           <h1 className="text-2xl font-bold text-white">Cafecito</h1>
           <nav className="flex items-center space-x-6">
             <Link to="/" className="text-white hover:text-purple-200">Inicio</Link>
@@ -28,7 +28,7 @@ function App() {
 
       {/* Footer global */}
       <footer className="w-full bg-gradient-to-r from-pink-600 to-purple-700 text-white py-8">
-        <div className="w-full px-4 text-center">
+        <div className="max-w-screen-lg mx-auto w-full px-4 text-center">
           <p className="text-sm font-light">© 2024 Cafecito. Todos los derechos reservados.</p>
           <nav className="mt-4 flex justify-center space-x-4">
             <a href="#" className="hover:text-purple-200">Sobre nosotros</a>

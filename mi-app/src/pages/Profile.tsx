@@ -4,7 +4,8 @@ import Slider from 'react-slick'; // Correcto: declaración al nivel superior
 import Modal from 'react-modal'; // Correcto: declaración al nivel superior
 import Galeria from './Galeria'; // Importa tu componente Galeria al nivel superior
 import Perfil from './Perfil'; // Importa el nuevo componente
-import Posts from './Post'
+import Posts from './Post';
+import Planes from './Planes';
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState('perfil'); // Estado para la pestaña activa
@@ -30,7 +31,7 @@ const Profile = () => {
           case 'posts':
             return <Posts />; // Usa el componente Posts
       case 'planes':
-        return <div>Contenido de los Planes</div>;
+            return <Planes />; // Usa el componente Planes
       default:
         return <div>Contenido no encontrado</div>;
     }
